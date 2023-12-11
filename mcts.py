@@ -373,7 +373,11 @@ if __name__ == "__main__":
 
     device, device2 = "cpu", "cpu"
     if torch.cuda.is_available():
-        a, b = get_freer_gpu(2)
+        gpus = get_freer_gpu(2)
+        if len(gpus) >= 2:
+            a, b = gpus
+        else:
+            a, b = gpus[0], gpus[0]
         device = f"cuda:{a}" # Training Device
         # device2 = f"cuda:{b}" # MCTS Device
 
