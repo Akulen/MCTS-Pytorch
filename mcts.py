@@ -28,11 +28,11 @@ else:
     config = {
         'game': 'ttt', # ttt
         'n_sim': 4,
-        'n_gen_games': 51, # 1000
+        'n_gen_games': 50, # 1000
         'n_train_iter': 100, # 1000
         'batch_size': 1024,
         'n_games_eval': 100,
-        'n_iter': 50,
+        'n_iter': 51,
         'n_jobs': 50,
     }
 
